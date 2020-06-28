@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Future Weather</string>
+    <string name="City">Moscow</string>
+    <string name="Temp">90*C</string>
+</resources>
