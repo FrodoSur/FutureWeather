@@ -2,4 +2,24 @@
     <string name="app_name">Future Weather</string>
     <string name="City">Moscow</string>
     <string name="Temp">90*C</string>
+    <string name="Tomorow">Завтра</string>
+    <string name="today">Сегодня</string>
+    <string name="sun">Sun</string>
+    <string name="temptoday">TempToday</string>
+    <string name="tomorowweather">TomorowWeather</string>
+    <string name="temptomorow">TempTomorow</string>
+    <string name="weathertoday">weatherToday</string>
+    <string name="fourweather">fourweather</string>
+    <string name="_4_july">4 july</string>
+    <string name="_15_c">15*C</string>
+    <string name="_11_c">11*C</string>
+    <string name="_10_c">10*C</string>
+    <string name="_17_c">17*C</string>
+    <string name="_5_july">5 july</string>
+    <string name="fithweather">fithWeather</string>
+    <string name="supposed_searching_string">Supposed Searching String</string>
+    <string name="supposedcity">supposedCity</string>
+    <string name="_20_c">-20*C</string>
+    <string name="st_petersburg">St.Petersburg</string>
+    <string name="weatherstr">weatherstr</string>
 </resources>
