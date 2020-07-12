@@ -28,22 +28,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/FirstCity"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="@string/supposedcity" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="@string/supposedcity" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="@string/supposedcity" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

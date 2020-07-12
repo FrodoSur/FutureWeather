@@ -1,49 +1,27 @@
 package com.example.futureweather.info;
 
-public class FutureWeather {   private int id;
-    private String city;
-    private double temperature;
-    private double wind;
-    private double pressure;
 
+public class FutureWeather {
+
+    private int id;
+    private String city;
+    private FutureWeatherParam weatherParameters;
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public FutureWeather(int id, String city){
+        this.id = id;
         this.city = city;
     }
-
-    public double getTemperature() {
-        return temperature;
+    public FutureWeatherParam getWeatherParameters() {
+        return weatherParameters;
     }
-
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
+    public void setWeatherParameters(FutureWeatherParam weatherParameters) {
+        this.weatherParameters = weatherParameters;
     }
-
-    public double getWind() {
-        return wind;
-    }
-
-    public void setWind(double windPower) {
-        this.wind = wind;
-    }
-
-    public double getPressure() {
-        return pressure;
-    }
-
-    public void setPressure(double pressure) {
-        this.pressure = pressure;
-    }
-
 }

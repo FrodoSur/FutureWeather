@@ -18,10 +18,11 @@
     <string name="_5_july">5 july</string>
     <string name="fithweather">fithWeather</string>
     <string name="supposed_searching_string">Supposed Searching String</string>
-    <string name="supposedcity">supposedCity</string>
+    <string name="supposedcity">Moscow</string>
     <string name="_20_c">-20*C</string>
     <string name="st_petersburg">St.Petersburg</string>
     <string name="weatherstr">weatherstr</string>
     <string name="Wind">3.2 м/с ЮЗ</string>
     <string name="pressure">743 мм рт. ст.</string>
+    <string name="wiki">Wiki</string>
 </resources>
