@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public static Intent getIntent(Context context, String key, int id){
-            Intent intent = new Intent(context, SwitchActivity.class);
+            Intent intent = new Intent(context, citieschoose.class);
             intent.putExtra(key, id);
             return intent;
         }

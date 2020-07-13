@@ -2,8 +2,6 @@ package com.example.futureweather;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +12,6 @@ import com.example.futureweather.info.Info;
 public class SwitchActivity extends AppCompatActivity {
 
     private static final String TAG = "SwitchActivity";
-    private TextView CityButton;
     private Info info;
 
     @Override
@@ -23,13 +20,6 @@ public class SwitchActivity extends AppCompatActivity {
         setContentView(R.layout.search);
         Log.d(TAG, "onCreate");
         init();
-        CityButton = findViewById(R.id.FirstCity);
-        CityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(MainActivity.getIntent(SwitchActivity.this, "id", info.getWeatherCity().getId()));
-            }
-        });
     }
 
     public void init(){
