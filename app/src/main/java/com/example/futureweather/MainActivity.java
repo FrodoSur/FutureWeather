@@ -1,24 +1,22 @@
 package com.example.futureweather;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-
-import com.example.futureweather.info.FutureWeather;
-import com.example.futureweather.info.FutureWeatherParam;
-import com.example.futureweather.info.Info;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+<<<<<<< Updated upstream
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+=======
         private static final String TAG = "MainActivity";
 
         TextView city;
@@ -26,16 +24,6 @@ public class MainActivity extends AppCompatActivity {
         TextView windSpeed;
         TextView Pressure;
         ImageView currentWeather;
-        TextView firstTemperature;
-        ImageView firstWeather;
-        TextView secondTemperature;
-        ImageView secondWeather;
-        TextView thirdDate;
-        TextView thirdTemperature;
-        ImageView thirdWeather;
-        TextView fourthDate;
-        TextView fourthTemperature;
-        ImageView fourthWeather;
         Info info;
         FutureWeather weatherCity;
         Button goToWikiBtn;
@@ -45,10 +33,19 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+            RecyclerView weatherList = findViewById(R.id.WeatherList);
+            weatherList.setAdapter(new weatherListAdapter());
+            weatherList.setHasFixedSize(true);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            weatherList.setLayoutManager(layoutManager);
+            DividerItemDecoration itemDecoration = new DividerItemDecoration(this,LinearLayoutManager.VERTICAL);
+            weatherList.addItemDecoration(itemDecoration);
             init();
+
             Log.d(TAG, "onCreate");
             int id = getIntent().getIntExtra("id", -1);
             updateScreen(id);
+
         }
 
         private void init(){
@@ -56,17 +53,7 @@ public class MainActivity extends AppCompatActivity {
             weatherCity = info.getWeatherCity();
             city = findViewById(R.id.city);
             mainTemperature = findViewById(R.id.currentTempreture);
-            firstTemperature = findViewById(R.id.FirstTemp);
-            secondTemperature = findViewById(R.id.SecondTemp);
-            thirdTemperature = findViewById(R.id.ThirdTemp);
-            fourthTemperature = findViewById(R.id.FourTemp);
-            thirdDate = findViewById(R.id.DayThree);
-            fourthDate = findViewById(R.id.DayFour);
             currentWeather = findViewById(R.id.currentWeather);
-            firstWeather = findViewById(R.id.FirstWeather);
-            secondWeather = findViewById(R.id.Secondweather);
-            thirdWeather = findViewById(R.id.ThirdWeather);
-            fourthWeather = findViewById(R.id.FourWeather);
             goToWikiBtn = findViewById(R.id.goToWiki);
             goToWikiBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -89,12 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 mainTemperature.setText(param.getTemperature());
                 windSpeed.setText(param.getWindPower());
                 Pressure.setText(param.getPressure());
-                firstTemperature.setText(param.getFirstTempreture());
-                secondTemperature.setText(param.getSecTempreture());
-                thirdTemperature.setText(param.getThirTempreture());
-                fourthTemperature.setText(param.getFourTempreture());
-                thirdDate.setText(param.getThirdDate());
-                fourthDate.setText(param.getFourthDate());
+
                 if(param.getCurrentWeather().equals("солнце")){
                     currentWeather.setImageResource(R.drawable.ic_sun);
                 }
@@ -102,34 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     currentWeather.setImageResource(R.drawable.ic_rain);
                 }
-                if(param.getFirstWeather().equals("солнце")){
-                    firstWeather.setImageResource(R.drawable.ic_sun);
-                }
-                else
-                {
-                    firstWeather.setImageResource(R.drawable.ic_rain);
-                }
-                if(param.getSecondWeather().equals("солнце")){
-                    secondWeather.setImageResource(R.drawable.ic_sun);
-                }
-                else
-                {
-                    secondWeather.setImageResource(R.drawable.ic_rain);
-                }
-                if(param.getThirdWeather().equals("солнце")){
-                    thirdWeather.setImageResource(R.drawable.ic_sun);
-                }
-                else
-                {
-                    thirdWeather.setImageResource(R.drawable.ic_rain);
-                }
-                if(param.getCurrentWeather().equals("солнце")){
-                    fourthWeather.setImageResource(R.drawable.ic_sun);
-                }
-                else
-                {
-                    fourthWeather.setImageResource(R.drawable.ic_rain);
-                }
+
             }
         }
 
@@ -140,3 +95,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+>>>>>>> Stashed changes
