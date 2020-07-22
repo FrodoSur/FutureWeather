@@ -69,119 +69,13 @@
                     app:srcCompat="@drawable/ic_sun" />
             </LinearLayout>
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/WeatherList"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/DayOne"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:text="@string/today" />
-
-                <TextView
-                    android:id="@+id/FirstTemp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/_15_c" />
-
-                <ImageView
-                    android:id="@+id/FirstWeather"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/weathertoday"
-                    app:srcCompat="@drawable/ic_rain" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/DayTwo"
-                    android:layout_width="120dp"
-                    android:layout_height="74dp"
-                    android:text="@string/Tomorow" />
-
-                <TextView
-                    android:id="@+id/SecondTemp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/_11_c" />
-
-                <ImageView
-                    android:id="@+id/Secondweather"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/tomorowweather"
-                    app:srcCompat="@drawable/ic_rain" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/DayThree"
-                    android:layout_width="120dp"
-                    android:layout_height="74dp"
-                    android:text="@string/_4_july" />
-
-                <TextView
-                    android:id="@+id/ThirdTemp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/_10_c" />
-
-                <ImageView
-                    android:id="@+id/ThirdWeather"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/fourweather"
-                    app:srcCompat="@drawable/ic_rain" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/DayFour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/_5_july" />
-
-                <TextView
-                    android:id="@+id/FourTemp"
-                    android:layout_width="55dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/_17_c" />
-
-                <ImageView
-                    android:id="@+id/FourWeather"
-                    android:layout_width="58dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/fithweather"
-                    app:srcCompat="@drawable/ic_sun" />
-            </LinearLayout>
+                android:layout_height="match_parent" />
 
             <Button
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/goToWiki"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

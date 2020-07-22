@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class citieschoose extends Fragment {
 
+    private static final String TAG = "citiesChooseFragment";
     public citieschoose() {
         // Required empty public constructor
     }
@@ -22,7 +23,6 @@ public class citieschoose extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.cities, container, false);
     }
     public void OnViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
@@ -39,7 +39,7 @@ public class citieschoose extends Fragment {
         city.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(MainActivity.getIntent(citieschoose.this, "id", 1));
+                startActivity(MainActivity.getIntent(getContext(), "id", 1));
             }
         });
     }

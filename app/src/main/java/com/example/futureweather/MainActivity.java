@@ -5,18 +5,24 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.futureweather.info.FutureWeather;
+import com.example.futureweather.info.FutureWeatherParam;
+import com.example.futureweather.info.Info;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< Updated upstream
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-}
-=======
+
         private static final String TAG = "MainActivity";
 
         TextView city;
@@ -56,10 +62,15 @@ public class MainActivity extends AppCompatActivity {
             currentWeather = findViewById(R.id.currentWeather);
             goToWikiBtn = findViewById(R.id.goToWiki);
             goToWikiBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    goToWiki(weatherCity.getCity());
-                }
+                    @Override
+                    public void onClick(View v) {
+                        Snackbar.make(v, "Перейти на Wiki", Snackbar.LENGTH_LONG).setAction("Подтвердить", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                goToWiki(weatherCity.getCity());
+                            }
+                        }).show();
+                    }
             });
         }
 
@@ -95,4 +106,3 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
->>>>>>> Stashed changes
