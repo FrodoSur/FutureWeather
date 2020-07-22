@@ -17,7 +17,7 @@ public class FutureWeatherParam {
     private String pressure;
 
     public FutureWeatherParam(String thirdDate, String fourthDate, String currentWeather, String firstWeather, String secondWeather, String thirdWeather, String fourthWeather, String temperature, String firstTempreture, String secTempreture, String thirTempreture, String fourTempreture, String windPower, String pressure) {
-        this.thirdDate = thirdDate;
+        this.setThirdDate(thirdDate);
         this.fourthDate = fourthDate;
         this.currentWeather = currentWeather;
         this.firstWeather = firstWeather;
